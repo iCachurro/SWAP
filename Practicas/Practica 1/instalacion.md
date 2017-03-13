@@ -4,19 +4,19 @@ Se han creado las dos máquinas virtuales, llamadas SWAP1 y SWAP2, en ambas se h
 
 * SWAP1
 
-![Instalado en SWAP1][SWAP1instalado.png]
+![Instalado en SWAP1](SWAP1instalado.png)
 
 * SWAP2
 
-![Instalado en SWAP2][SWAP2instalado.png]
+![Instalado en SWAP2](SWAP2instalado.png)
 
 
 También se ha comprobado que se puede acceder a ellas desde el SO anfitrión:
 
 * SWAP1
 
-![Acceso web SWAP1][SWAP1web.png]
+![Acceso web SWAP1](SWAP1web.png)
 
 * SWAP2
 
-![Acceso web SWAP2][SWAP2web.png]
+![Acceso web SWAP2](SWAP2web.png)
