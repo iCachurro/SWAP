@@ -1,4 +1,4 @@
-## Práctica 1 - Instalación máquinas virtuales
+# Práctica 1 - Instalación máquinas virtuales
 
 Se han creado las dos máquinas virtuales, llamadas SWAP1 y SWAP2, en ambas se han instalado LAMP y ssh, como se puede ver a continuación:
 

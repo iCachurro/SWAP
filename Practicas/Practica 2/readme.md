@@ -1,6 +1,6 @@
-## Práctica 2 - Clonar la información de un sitio web
+# Práctica 2 - Clonar la información de un sitio web
 
-# rsync
+## rsync
 
 Una vez instalado en ambas máquinas el rsync, se comprueba el funcionamiento de este desde la máquina
 secundaría a la principal.
@@ -18,7 +18,7 @@ Como se puede ver, el contenido de la máquina 1, ha copiado en la máquina 2.
 ![ll en SWAP2](SWAP2ll.png)
 
 
-# ssh sin clave
+## ssh sin clave
 
 Para poder conectarnos sin clave desde la máquina 2 a la 1, es necesario que introduzcamos la clave
 pública de la máquina 2 en la 1, para ello primero generamos la clave:
@@ -35,7 +35,7 @@ Teniendo ya la clave introducida tan solo nos conetactaremos y no hara falta int
 ![ssh en SWAP2](SWAP2ssh.png)
 
 
-# cron
+## cron
 
 Para que una tarea se nos reproduzca cada X tiempo, es necesario modificar el archivo /etc/crontab con
 los datos de cada cuanto queremos que lo realice y que ha de realizar. En este caso va a ser que se realice
