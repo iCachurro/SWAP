@@ -3,7 +3,7 @@
 ## rsync
 
 Una vez instalado en ambas máquinas el rsync, se comprueba el funcionamiento de este desde la máquina
-secundaría a la principal.
+2 a la 1.
 
 ![rsync en SWAP2](SWAP2rsync.png)
 
