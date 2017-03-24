@@ -30,7 +30,7 @@ la introducción de la contraseña para que se pueda conectar.
 
 ![Introduciendo clave de SWAP2](SWAP2copy.png)
 
-Teniendo ya la clave introducida tan solo nos conetactaremos y no hara falta introducir la clave.
+Teniendo ya la clave introducida tan solo nos conetactaremos y no hará falta introducir la clave.
 
 ![ssh en SWAP2](SWAP2ssh.png)
 
