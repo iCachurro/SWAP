@@ -14,7 +14,7 @@ Antes de volver a lanzar el servicio eliminaremos ``` /etc/nginx/sites-enable/de
 
 Reiniciamos el servicio de nginx.
 
-![status nginx en SWAP3](SWAP3status.png)
+![status nginx en SWAP3](SWAP3nginxStatus.png)
 
 Una vez vemos que funciona perfectamente haciendole peticiones al balanceador desde nuestro ordenador con ``` curl ```.
 
@@ -23,7 +23,7 @@ Una vez vemos que funciona perfectamente haciendole peticiones al balanceador de
 Haremos unas pequeñas modificaciones para que un usuario que ha iniciado una sesión en una máquina no la pierda, para ello añadimos en nuestro archivo de configuración del balanceador ``` ip_hash ``` antes de la dirección de nuestras máquinas.  
 También añadiremos después de las máquinas ``` keepalive ``` con valor 3, para indicar que son 3 segundos de vida a las conexiones de una persistencia de múltiples peticiones HTTP.
 
-![opciones nginx en SWAP3](SWAP3opciones.png)
+![opciones nginx en SWAP3](SWAP3nginxOpciones.png)
 
 
 ## haproxy
@@ -51,7 +51,13 @@ Para someter al servidor de balanceo a una gran carga de trabajo, usaremos Apach
 | Respuestas por segundo | 1027.24 | 734.02 |
 | Tiempo medio por respuesta concurrente (ms) | 9.735 | 13.624 |
 | Ratio transferido (KB/seg) | 373.18 | 267.37 |
-| HTML transferido (bytes)| 103000 | 103000 |
-| Total transferido | 372000 | 373000 |
+| HTML transferido (bytes) | 103000 | 103000 |
+| Total transferido (bytes) | 372000 | 373000 |
 
-![Sobrecarga a nginx](nginxSobrecarga.png) ![Sobrecarga a haproxy](haproxySobrecarga.png)
+* Sobrecarga nginx
+
+![Sobrecarga a nginx](nginxSobrecarga.png)
+
+* Sobrecarga haproxy
+
+![Sobrecarga a haproxy](haproxySobrecarga.png)
