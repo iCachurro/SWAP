@@ -41,18 +41,33 @@ Desde nuestro ordenador comprobamos que funciona haciendole peticiones.
 ![Peticiones web a haproxy](haproxyWebs.png)
 
 
+## pound
+
+Una vez instalado pound y detenido el servicio de haproxy para que al configurarlo y activarlo no cause problemas nos dirigimos al archivo ``` /etc/pound/pound.cfg ``` para editarlo y dejarlo de la siguiente forma:
+
+![pound en SWAP3](SWAP3pound.png)
+
+Le indicamos en que dirección IP ha de escuchar las peticiones y en el puerto. Después le indicamos cuales son nuestros servidores para repartir la carga y sus puertos de entrada. Guardamos el archivo y reiniciamos el servicio para que empiece a funcionar.
+
+Desde nuestro ordenador comprobamos que funciona haciendole peticiones.
+
+![Peticiones web a pound](poundWebs.png)
+
+
 ## Someter a una alta carga en el servidor de balanceo
 
 Para someter al servidor de balanceo a una gran carga de trabajo, usaremos Apache Benchmark estando activo en cada ocasión uno de los balanceadores, se usara este comando para realizarlo en cada ocasión: ``` ab -n 1000 -c 10 http://172.16.95.154/index.html ```
 
-|   | nginx | haproxy |
-|:-:|:-:|:-:|
-| Tiempo ocupado por test (seg) | 0.973 | 1.362 |
-| Respuestas por segundo | 1027.24 | 734.02 |
-| Tiempo medio por respuesta concurrente (ms) | 9.735 | 13.624 |
-| Ratio transferido (KB/seg) | 373.18 | 267.37 |
-| HTML transferido (bytes) | 103000 | 103000 |
-| Total transferido (bytes) | 372000 | 373000 |
+|   | nginx | haproxy | pound |
+|:-:|:-:|:-:|:-:|
+| Tiempo ocupado por test (seg) | 0.973 | 1.362 | 1.958 |
+| Respuestas por segundo | 1027.24 | 734.02 | 510.82 |
+| Tiempo medio por respuesta concurrente (ms) | 9.735 | 13.624 | 19.576 |
+| Ratio transferido (KB/seg) | 373.18 | 267.37 | 186.07 |
+| HTML transferido (bytes) | 103000 | 103000 | 103000 |
+| Total transferido (bytes) | 372000 | 373000 | 373000 |
+
+Como se puede observar, el más rápido de los tres balanceadores de carga es nginx.
 
 * Sobrecarga nginx
 
@@ -61,3 +76,7 @@ Para someter al servidor de balanceo a una gran carga de trabajo, usaremos Apach
 * Sobrecarga haproxy
 
 ![Sobrecarga a haproxy](haproxySobrecarga.png)
+
+* Sobrecarga pound
+
+![Sobrecarga a pound](poundSobrecarga.png)
