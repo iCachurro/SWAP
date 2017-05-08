@@ -41,18 +41,18 @@ Creamos un script con las reglas para nuestro cortafuegos.
 
 ![reglas iptables en SWAP1](SWAP1reglasIptables.png)
 
-iptables -F -> Vacía las reglas de la cadena
-iptables -X -> Borra la cadena vacía
-iptables -Z -> Poner a cero los contadores de paquetes y bytes de todas las reglas de una cadena
-iptables -t nat -F -> Vacía las reglas de la cadena de las interfaces
+iptables -F -> Vacía las reglas de la cadena  
+iptables -X -> Borra la cadena vacía  
+iptables -Z -> Poner a cero los contadores de paquetes y bytes de todas las reglas de una cadena  
+iptables -t nat -F -> Vacía las reglas de la cadena de las interfaces  
 
-iptables -P INPUT DROP -> Deniega cualquier conexión entrante
-iptables -P OUTPUT DROP -> Deniega cualquier conexión saliente
+iptables -P INPUT DROP -> Deniega cualquier conexión entrante  
+iptables -P OUTPUT DROP -> Deniega cualquier conexión saliente  
 
-iptables -A INPUT -i lo -j ACCEPT -> Añade el permiso de entrada para las conexiones locales
-iptables -A OUTPUT -i lo -j ACCEPT -> Añade el permiso de salida para las conexiones locales
+iptables -A INPUT -i lo -j ACCEPT -> Añade el permiso de entrada para las conexiones locales  
+iptables -A OUTPUT -i lo -j ACCEPT -> Añade el permiso de salida para las conexiones locales  
 
-iptables -A INPUT -i ens33 -p tcp -m multiport --dports 22,80,443 -m state --state NEW,ESTABLISHED -j ACCEPT -> Añade el permiso de conexiones entrantes para la interfaz ens33 de tipo tcp a los puertos 22, 80 y 443 para las conexiones nuevas o ya establecidas.
+iptables -A INPUT -i ens33 -p tcp -m multiport --dports 22,80,443 -m state --state NEW,ESTABLISHED -j ACCEPT -> Añade el permiso de conexiones entrantes para la interfaz ens33 de tipo tcp a los puertos 22, 80 y 443 para las conexiones nuevas o ya establecidas.  
 iptables -A OUTPUT -o ens33 -p tcp -m multiport --dports 22,80,443 -m state --state ESTABLISHED -j ACCEPT ->  Añade el permiso de conexiones salientes para la interfaz ens33 de tipo tcp a los puertos 22, 80 y 443 para las conexiones ya establecidas.
 
 Una vez creadas nos saldran todas las reglas con el comando anterior para ver el cortafuegos.
