@@ -31,7 +31,7 @@ Necesitamos clonar la base de datos en un archivo para que podamos exportarla e 
 
 Una vez clonado tan solo necesitamos mover el archivo a la máquina esclava para realizar el proceso contrario.
 
-![mover BD y tablas en SWAP1](SWAP1moverBD.png)
+![mover BD y tablas en SWAP2](SWAP2moverBD.png)
 
 Accedemos a mysql de la máquina esclavo y creamos la BD con el mismo nombre que en el maestro, ya que esta es la única instrucción que no se ha copiado en el archivo.
 
