@@ -1,23 +1,3 @@
-1) ambas maquinas deben tener la BD creada (clonada) antes de comenzar.
-    -> M1 - Crear BD, crear tabla, insertar
-    -> M1 - mysqldump => fichero.sql
-    -> M2 - llevamos el fichero sql (scp, rsync)
-    -> M2 - recreamos la BD
-
-
-    La idea maestro-esclavo
-    * configurar demonios
-    M1
-    * ir a la M1 editar /etc/mysql/my.cfg o /etc/mysql/mysql.conf/mysql.conf
-        - comentar bind-address 127.0.0.1
-        - server-id = 1
-    M2
-    * server-id = 2
-
-    M1
-    * creamos ususario con permisos (SHOW MASTER ESTATUS)
-
-
 # Práctica 5. Replicación de bases de datos MySQL
 
 Para esta práctica se va a crear una base datos actualizada maestro-esclavo.
