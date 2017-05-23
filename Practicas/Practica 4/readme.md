@@ -55,7 +55,7 @@ iptables -A OUTPUT -i lo -j ACCEPT -> Añade el permiso de salida para las conex
 iptables -A INPUT -i ens33 -p tcp -m multiport --dports 22,80,443 -m state --state NEW,ESTABLISHED -j ACCEPT -> Añade el permiso de conexiones entrantes para la interfaz ens33 de tipo tcp a los puertos 22, 80 y 443 para las conexiones nuevas o ya establecidas.  
 iptables -A OUTPUT -o ens33 -p tcp -m multiport --dports 22,80,443 -m state --state ESTABLISHED -j ACCEPT ->  Añade el permiso de conexiones salientes para la interfaz ens33 de tipo tcp a los puertos 22, 80 y 443 para las conexiones ya establecidas.
 
-Una vez creadas nos saldran todas las reglas con el comando anterior para ver el cortafuegos.
+Una vez creadas nos saldrán todas las reglas con el comando anterior para ver el cortafuegos.
 
 ![iptables en SWAP1](SWAP1iptables.png)
 
