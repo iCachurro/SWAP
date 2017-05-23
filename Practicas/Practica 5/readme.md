@@ -2,7 +2,7 @@
 
 Para esta práctica se va a crear una base datos actualizada maestro-esclavo.
 
-# Crear BD e insertar datos
+## Crear BD e insertar datos
 
 Accedemos a la BD con la instrucción: ``` mysql -u root -p ```
 
