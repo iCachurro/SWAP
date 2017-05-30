@@ -9,44 +9,44 @@ El IBM Z13 es un mainframe recientemente sacado por IBM, que tiene un precio est
 ## Ejercicio 4.2
 **Buscar información sobre precio y características de balanceadores hardware específicos. Compara las prestaciones que ofrecen unos y otros.**
 
-* ZNA 6508 Hardware Appliance (ZEVENET)
-    Precio: 2795 euros.
-    CPU: Intel® CoreTM i5-6500, 3.20 GHz CON 4 cores
-    Memoria: DDR4 2133 MHz, ECC, 4GB RAM (max. 32 GB)
-    Almacenamiento: 16GB mSATA.
-    Conexiones concurrentes: Soporte L2, L3, L4 y L7.
+* ZNA 6508 Hardware Appliance (ZEVENET)  
+    - Precio: 2795 euros.  
+    - CPU: Intel® CoreTM i5-6500, 3.20 GHz CON 4 cores  
+    - Memoria: DDR4 2133 MHz, ECC, 4GB RAM (max. 32 GB)  
+    - Almacenamiento: 16GB mSATA.  
+    - Conexiones concurrentes: Soporte L2, L3, L4 y L7.  
 
 * LM-3000 Server Load Balancer (KEMP)
-    Precio: 4875 dólares.
-    CPU: Intel Pentium Dual Core G850 @ 2.9GHz
-    Memoria: 4GB
-    Almacenamiento: 32GB SSD
-    Conexiones concurrentes: 8,600,000 (L4), 69,000 (L7, HTTP requests/sec).
+    - Precio: 4875 dólares.
+    - CPU: Intel Pentium Dual Core G850 @ 2.9GHz
+    - Memoria: 4GB
+    - Almacenamiento: 32GB SSD
+    - Conexiones concurrentes: 8,600,000 (L4), 69,000 (L7, HTTP requests/sec).
 
 
 ## Ejercicio 4.3
 **Buscar información sobre los métodos de balanceo que implementan los dispositivos recogidos en el ejercicio 4.2**
 
 * ZNA 6508 Hardware Appliance:
-    Por peso (weight)
-    Round Robin
-    Carga de CPU
-    Memoria
-    Menor número de conexiones (least connections)
-    Menor tiempo de respuesta (least response)
+    - Por peso (weight)
+    - Round Robin
+    - Carga de CPU
+    - Memoria
+    - Menor número de conexiones (least connections)
+    - Menor tiempo de respuesta (least response)
 
 * LM-3000 Server Load Balancer
-    "SDN Adaptive"
-    Round Robin
-    Round Robin con peso (weighted Round Robin)
-    Menor número de conexiones (least connections)
-    Menor número de conexiones con peso (weighted least connections)
-    "Agent‐based Adaptive"
-    "Chained Failover (Fixed Weighting)
-    IP Hash
-    "Layer 7 Content Switching"
-    "Global Server Load Balancing (GSLB)"
-    "AD Group based traffic steering"
+    - "SDN Adaptive"
+    - Round Robin
+    - Round Robin con peso (weighted Round Robin)
+    - Menor número de conexiones (least connections)
+    - Menor número de conexiones con peso (weighted least connections)
+    - "Agent‐based Adaptive"
+    - "Chained Failover (Fixed Weighting)
+    - IP Hash
+    - "Layer 7 Content Switching"
+    - "Global Server Load Balancing (GSLB)"
+    - "AD Group based traffic steering"
 
 
 ## Ejercicio 4.4
