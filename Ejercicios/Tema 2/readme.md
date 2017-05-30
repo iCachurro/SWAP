@@ -58,5 +58,5 @@ Disponibilidad Total --> 99.6625% * 99.9% * 99.9999999% * 99.9992% * 99.6625% * 
 - WebLogic de Oracle.
 - WebSphere de IBM.
 
-**Buscar productos comerciales para servidores de almacenamiento.**
+**Buscar productos comerciales para servidores de almacenamiento.**  
 Los sistemas NAS de las principales marcas Synology y QNAQ.
